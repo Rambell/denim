@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
+  --background: #f7f8fb;
   --foreground: #171717;
+
+  --sidebar-bg: #1c2542;
+  --sidebar-bg-alt: #16213e;
+  --sidebar-fg: #e7e9f5;
+  --sidebar-fg-muted: #9aa3c7;
+  --sidebar-badge-bg: #8a5a3a;
+  --sidebar-badge-fg: #fdf3e7;
+
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+
+  --bubble-user-bg: #dbe6fb;
+  --bubble-user-fg: #1e2a4a;
+  --bubble-bot-bg: #ffffff;
+  --bubble-bot-border: #e5e7eb;
+
+  --accent: #2f6fed;
+  --accent-fg: #ffffff;
+
+  --muted-fg: #6b7280;
+  --border: #e5e7eb;
+
+  --cat-productos: #2f6fed;
+  --cat-ventas: #16a34a;
+  --cat-tallas: #7c3aed;
+  --cat-cambios: #0d9488;
+  --cat-descuentos: #db2777;
+  --cat-stock: #c2703d;
+}
+
+.dark {
+  --background: #0f1420;
+  --foreground: #e7e9f5;
+
+  --sidebar-bg: #141a30;
+  --sidebar-bg-alt: #10182c;
+  --sidebar-fg: #e7e9f5;
+  --sidebar-fg-muted: #8891b8;
+  --sidebar-badge-bg: #8a5a3a;
+  --sidebar-badge-fg: #fdf3e7;
+
+  --card-bg: #171d30;
+  --card-border: #2a3352;
+
+  --bubble-user-bg: #24345c;
+  --bubble-user-fg: #dbe6fb;
+  --bubble-bot-bg: #171d30;
+  --bubble-bot-border: #2a3352;
+
+  --accent: #5b8def;
+  --accent-fg: #0f1420;
+
+  --muted-fg: #9099bd;
+  --border: #2a3352;
+
+  --cat-productos: #5b8def;
+  --cat-ventas: #34d399;
+  --cat-tallas: #a78bfa;
+  --cat-cambios: #2dd4bf;
+  --cat-descuentos: #f472b6;
+  --cat-stock: #e0975a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-bg-alt: var(--sidebar-bg-alt);
+  --color-sidebar-fg: var(--sidebar-fg);
+  --color-sidebar-fg-muted: var(--sidebar-fg-muted);
+  --color-sidebar-badge-bg: var(--sidebar-badge-bg);
+  --color-sidebar-badge-fg: var(--sidebar-badge-fg);
+
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+
+  --color-bubble-user-bg: var(--bubble-user-bg);
+  --color-bubble-user-fg: var(--bubble-user-fg);
+  --color-bubble-bot-bg: var(--bubble-bot-bg);
+  --color-bubble-bot-border: var(--bubble-bot-border);
+
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-muted-fg: var(--muted-fg);
+  --color-border: var(--border);
+
+  --color-cat-productos: var(--cat-productos);
+  --color-cat-ventas: var(--cat-ventas);
+  --color-cat-tallas: var(--cat-tallas);
+  --color-cat-cambios: var(--cat-cambios);
+  --color-cat-descuentos: var(--cat-descuentos);
+  --color-cat-stock: var(--cat-stock);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
