@@ -3,7 +3,6 @@ import {
   FileText,
   Package,
   RefreshCw,
-  Ruler,
   Shirt,
   Tag,
 } from "lucide-react";
@@ -19,13 +18,6 @@ export const suggestedQuestions: SuggestedQuestion[] = [
 
 export const categoryCards: CategoryCard[] = [
   {
-    id: "productos",
-    title: "Productos",
-    subtitle: "Consulta sobre jeans",
-    icon: Shirt,
-    accentVar: "cat-productos",
-  },
-  {
     id: "ventas",
     title: "Ventas",
     subtitle: "Historial de ventas",
@@ -33,25 +25,11 @@ export const categoryCards: CategoryCard[] = [
     accentVar: "cat-ventas",
   },
   {
-    id: "tallas",
-    title: "Tallas",
-    subtitle: "Guía de tallas",
-    icon: Ruler,
-    accentVar: "cat-tallas",
-  },
-  {
     id: "cambios",
     title: "Cambios",
     subtitle: "Política de cambios",
     icon: RefreshCw,
     accentVar: "cat-cambios",
-  },
-  {
-    id: "descuentos",
-    title: "Descuentos",
-    subtitle: "Promociones",
-    icon: Tag,
-    accentVar: "cat-descuentos",
   },
   {
     id: "stock",
